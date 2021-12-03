@@ -40,7 +40,7 @@ sudo hping3 -c 14000 -d 120 -S -w 64 -p 3088 --flood --rand-source 192.168.71.95
 
 ~~ Εκτέλεση εντολή netstat ~~
 
-``bash
+```bash
 netstat -s
 Ip:
     Forwarding: 1
@@ -92,4 +92,4 @@ TcpExt:
     317668 packet headers predicted
     7373 acknowledgments not containing data payload received
     23406 predicted acknowledgments
-``
+```
